@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <link rel="shortcut icon" href="img/CK-favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/styles.css">-->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:wght@300&family=Water+Brush&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+</head>
+
+<body>
+    <header class="page-header">
+        <img src="img/CK-logo.JPG" class="page-header__item" class="page-header__logo" alt="This is the personal logo of Christian">
+        <nav class="page-header__item" class="main-navigation">
+                <ul role="menubar" class="navigation-list">
+                    <li role="presentation">
+                        <a href="index.html" target="blank" role="menuitem" class="navigation-list__item" class="navigation-list__item--active">Home</a>
+                    </li>
+                    <li role="presentation" >
+                        <a href="about.html" target="blank" role="menuitem" class="navigation-list__item">About me</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="contact.html" target="blank" role="menuitem" class="navigation-list__item">Contact</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="work.html" target="blank" role="menuitem" class="navigation-list__item">Work</a>
+                    </li>
+                </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1> Get in touch </h1>
+        <p>
+            Happy you got here. Below you can register or contact me any time directly. Looking forward getting in touch with you.
+        </p>
+
+        <h2> Registration </h2>
+        <form action="" method="post" id="contact-form">
+
+            <label class="standard-label" for="contact-email"> Email *: </label>
+            <input type="email" id="contact-email" required="required"> 
+            <br> <br>
+
+            <label class="standard-label" for="contact-tel"> Mobile: </label>
+            <input type="tel" id="contact-tel">
+            <br> <br>
+
+            <label class="standard-label" for="contact-message"> Message: </label>
+            <textarea maxlength="240" id="contact-message"> </textarea>
+            <br> <br>
+
+            <label class="standard-label" for="contact-password"> Password *: </label>
+            <input type="text" id="contact-password" required="required">
+            <br> <br>
+
+            <p> *: Please fill out the required fields for our all sake ;) </p>
+            <input type="submit" value="Send message">
+            <br> <br>
+        </form>
+
+        <h2> Contact </h2>
+            <div>
+                Christian Kienzle<br>
+                Wesenberger Ring 19a<br>
+                12359 Berlin<br>
+                Deutschland<br>
+                <br>
+                Tel <a href="tel:+491234567">+49 1773749464</a><br>
+                Mail <a href="mailto:christian.kienzle.1982@gmail.com"> E-Mail Contact </a>
+                <p> More information you find on the <a href="about.html" rel="Menu about page"> about </a> webpage. </p> 
+            </div>
+    </main>
+
+    <footer class="page-footer">
+        <p>
+            Find me on
+        </p >
+        <div class="page-footer__socialMedia">
+            <img src="img/githubIcon.svg" class="page-footer__socialMedia---Icon" alt="This is a Github logo and a link to my personal github page">
+            <img src="img/twitterIcon.svg" class="page-footer__socialMedia---Icon" alt="This is a Twitter logo and a link to my tweets">
+            <img src="img/linkedinIcon.svg" class="page-footer__socialMedia---Icon" alt="This is a LinkedIn logo and a link to my LinkedIn account">
+        </div>
+    </footer>
+
+    <script src="js/tota11y.min.js"> </script>
+</body>
+</html>

@@ -1,0 +1,473 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 2 version
+*/
+
+/*
+Table of Contents: 
+0. Global: Spacing & Layout
+1. Global: Colours
+2. Global: Text
+3. Global: Interactive Elements
+4. Global: Primary Navigation
+5. Global: Footer
+6. Page: Home
+7. Page: Work
+8. Page: About
+9. Page: Contact
+*/
+
+/* 
+=====================================
+0. GLOBAL SPACINGS AND LAYOUT
+=====================================
+*/
+
+*{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+header {
+    margin: 0;
+  }
+  
+  main {
+    margin: 0;
+    /*padding: 20px;*/
+  }
+  
+  footer {
+    margin: 0;
+  }
+
+/* 
+=====================================
+1. GLOBAL COLOUR STYLINGS
+=====================================
+*/
+
+:root{
+    /* Primary Brand Colours */
+    /* Secondary Brand Colours */
+
+    /* Primary Body Colours */
+
+    /* Primary Grid Colours */
+
+    /* Anchor Colours */
+
+    /* Button - Primary Colours */
+    /* Button - Secondary Colours */
+    /* Button - Border Colours */
+
+    /* Animation Colours */
+
+    /* Head + hr Colours */
+
+    
+
+    /*Display border for  BEM 1st Layer:                          2px solid #212423;
+    Display border-     BEM 2nd Layer:                          2px solid #049766;
+    Display border-     BEM 3rd Layer:                          2px solid #970404;*/
+}
+
+
+/* 
+=====================================
+2. GLOBAL TEXT STYLINGS:    >>>> TYPOGRAPHY
+=====================================
+*/
+
+:root{
+/************************* Font-Size >>> Body & Headlines*/
+/*--size-large:*/
+
+/*************************  Font-Weight >>> Body & Headlines */
+/*--size-large:*/
+/*--size-small:*/
+}
+
+body{
+    /****** Color *****/
+    background-color: #bebecaef;
+    /***** Typographie *****/
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+h1{
+    /***** Typographie *****/
+    font-size: 30px;
+    font-weight: 700;
+}
+h2{
+    /***** Typographie *****/
+    font-size: 24px;
+    font-weight: 600;
+}
+h3{
+    /***** Typographie *****/
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+/* 
+=====================================
+3. INTERACTIVE ELEMENTS
+=====================================
+*/
+
+/**************************************************************************** ANCHOR */
+a{
+    color: #357b70;
+    margin: 20px;
+}
+a:hover, a:focus{
+    text-decoration: none;
+}
+a:visited{
+    color: #025829;
+}
+a:active{
+    color: #034d5a;
+}
+
+/**************************************************************************** Button */
+button{
+    /****** Color *****/
+    background-color: #adaddaef;
+    color: #f3f7f5;
+    /***** Typographie *****/
+    font-family: inherit;
+    font-size: 16px;
+    text-decoration: none;
+    /***** Layout *****/
+    display: inline-block;
+    /*margin: 20px;*/
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+.button{
+    /****** Color *****/
+    background-color: #adaddaef;
+    color: #f3f7f5;
+    /***** Typographie *****/
+    font-family: inherit;
+    font-size: 16px;
+    text-decoration: none;
+    /***** Layout *****/
+    display: inline-block;
+    /*margin: 20px;*/
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+
+button:hover, button:focus,
+ .button:hover, .button:focus{
+    cursor: pointer;
+    opacity: 0.8;
+
+}
+.button__secondary{
+    /****** Layout *****/
+    margin: 20px;
+    /****** Color *****/
+    background-color: #e0b354;
+    color: #2b2b2b;
+}
+
+/* 
+=====================================
+4. PRIMARY NAVIGATION
+=====================================
+*/
+
+.navigation-list__item---active{
+    text-decoration: none;
+}
+.navigation-list{
+    list-style-type: none;
+}
+.navigation-list li{
+    display: inline-block;
+    margin: 15px;
+}
+.page-header{
+    /*border: 2px solid #212423;*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+.page-header__item{
+    /*border: 2px solid #049766;*/
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 200px;
+            flex: 0 1 200px;
+}
+.page-header__item:last-child{
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    text-align: right;
+}
+.page-header__hr{
+    border: none;
+    height: 2px;
+    /* Set the hr color */
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
+}
+
+/*
+.page-header__logo{
+    width: 50px;
+    height: 100px;
+}
+*/
+
+/* 
+=====================================
+5. FOOTER
+=====================================
+*/
+
+.page-footer{
+    /*border: 2px solid #212423;*/
+    clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+}
+.page-footer__socialMedia{
+    /*border: 2px solid #049766;*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.page-footer__socialMedia---Icon{
+    /*border: 2px solid #970404;*/
+    width: 40px;
+    height: auto;
+    margin: 3px; 
+}
+
+/* 
+=====================================
+6. HOME PAGE
+=====================================
+*/
+
+.profile{
+    /*border: 2px solid #212423;*/
+    max-width: 700px;
+    height: auto;
+    margin: 0 auto;
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.profile__portrait{
+    float: left;
+    width: 240px;
+    height: 255px;
+    border-radius: 50%;
+    margin-right: 40px;
+}
+.profile__text{
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100px;
+            flex: 1 1 100px;
+}
+
+
+/* 
+=====================================
+7. WORK PAGE
+=====================================
+*/
+
+/**************************************************************************** start grid fallback */
+.project-list__item {
+    display: inline-block;
+    width: 33%;
+}
+/**************************************************************************** end grid fallback */
+
+@supports (display: grid){
+.project-list {
+        /*border: 2px solid #212423;*/
+        /*text-align: center;*/
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        margin: 0;
+        /*justify-content: center;*/
+}
+    .project-list__item {
+        background-color:  #adaddaef;
+        /*text-align:center;*/
+        width: auto;
+        min-height: auto;
+        margin: 0;
+    }
+    .project-list__item:last-child{
+        -ms-grid-column: 3;
+        grid-column: 3 / 3;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
+        grid-row: 1 / 3;
+    }
+    
+}
+
+/**************************************************************************** Media */
+@media all and (max-width: 500px) { 
+    .project-list{
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+}
+@media all and (min-width: 500px) and (max-width: 750px) { 
+    .project-list{
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media all and (max-width: 750px) { 
+    .project-list{
+        gap: 10px;
+    }
+    .project-list__item:last-child{
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+    }
+    h1{
+    font-size: 20px;
+    }
+}
+
+/* 
+=====================================
+8. ABOUT PAGE
+=====================================
+*/
+
+.about-page{
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+.about-page__list{
+    list-style-type: none;
+}
+
+@-webkit-keyframes color-change {
+    0% {
+        fill: #edc655;
+    }
+    50% {
+        fill: #fcffad;
+    }
+    100% {
+        fill: #f76414;
+    }
+}
+
+@keyframes color-change {
+    0% {
+        fill: #edc655;
+    }
+    50% {
+        fill: #fcffad;
+    }
+    100% {
+        fill: #f76414;
+    }
+}
+.sun{
+    -webkit-animation: 4s color-change infinite alternate linear;
+            animation: 4s color-change infinite alternate linear;
+}
+
+@-webkit-keyframes cloud-moves {
+    from {
+        -webkit-transform: translate(0. 50px);
+                transform: translate(0. 50px)
+    }
+    to {
+        -webkit-transform: translate(200px, 50px);
+                transform: translate(200px, 50px)
+    }
+}
+
+@keyframes cloud-moves {
+    from {
+        -webkit-transform: translate(0. 50px);
+                transform: translate(0. 50px)
+    }
+    to {
+        -webkit-transform: translate(200px, 50px);
+                transform: translate(200px, 50px)
+    }
+}
+
+.cloud-front {
+    -webkit-animation: 30s cloud-moves infinite alternate linear;
+            animation: 30s cloud-moves infinite alternate linear;
+}
+
+@-webkit-keyframes cloud-move-reverse {
+    from {
+      -webkit-transform: translate(450px, 48px);
+              transform: translate(450px, 48px);
+      /*transform: rotate(0deg)*/
+    }
+    to {
+      -webkit-transform: translate(100px, 48px);
+              transform: translate(100px, 48px);
+      /*transform: rotate(120deg)*/
+    }
+  }
+
+@keyframes cloud-move-reverse {
+    from {
+      -webkit-transform: translate(450px, 48px);
+              transform: translate(450px, 48px);
+      /*transform: rotate(0deg)*/
+    }
+    to {
+      -webkit-transform: translate(100px, 48px);
+              transform: translate(100px, 48px);
+      /*transform: rotate(120deg)*/
+    }
+  }
+  .cloud-back {
+    -webkit-animation: 10s cloud-move-reverse infinite alternate linear;
+            animation: 10s cloud-move-reverse infinite alternate linear;
+  }
