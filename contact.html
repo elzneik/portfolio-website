@@ -1,92 +1,107 @@
-<!DOCTYPE html>
+<!Doctype html>
+<!-- html -->
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact Christian Kienzle</title>
-    <link rel="shortcut icon" href="img/CK-favicon.png">
-     <!--<link rel="stylesheet" type="text/css" href="css/style.production.css">-->
-     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:wght@300&family=Water+Brush&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-</head>
+    <!-- head -->
+    <head>
+        <!-- meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- title-->
+        <title> Contact Christian Kienzle </title>
+        <link href="img/CK-favicon.png" rel="This is the title icon">
+        <!-- stylesheet -->
+        <link href="css/style.production.css" rel="This is the link to the css stylesheet file" type="text/css">
+        <!-- typography -->
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:wght@300&family=Water+Brush&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    </head> <!-- // head -->
 
-<body>
-    <header class="page-header">
-        <img src="img/CK-logo.JPG" class="page-header__item" class="page-header__logo" alt="This is the personal logo of Christian">
-        <nav class="page-header__item" class="main-navigation">
-                <ul role="menubar" class="navigation-list">
-                    <li role="presentation">
-                        <a href="index.html" target="blank" role="menuitem" class="navigation-list__item" class="navigation-list__item--active">Home</a>
-                    </li>
-                    <li role="presentation" >
-                        <a href="about.html" target="blank" role="menuitem" class="navigation-list__item">About me</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="contact.html" target="blank" role="menuitem" class="navigation-list__item">Contact</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="work.html" target="blank" role="menuitem" class="navigation-list__item">Work</a>
-                    </li>
-                </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <h1> Get in touch </h1>
-        <p>
+
+    <!-- body -->
+    <body>
+        <!-- header -->
+        <header class="page-header">
+            <img src="img/keynzleV6.svg" class="page-header__item" class="page-header__logo"  alt="This is my logo" width="10" height="80"> <!-- Big Problem with Picture size  -->
+            <!-- navigation -->
+            <nav class="page-header__item" class="navigation-menu">
+                <!-- list -->
+                <ul class="navigation-list" role="menubar"> 
+                    <li role="presentation"><a class="navigation-list__item" class="navigation-list__item--active" href="index.html" target="blank" role="menuitem"> Home </a></li>
+                    <li role="presentation"><a class="navigation-list__item" href="about.html" target="blank" role="menuitem"> About </a></li>
+                    <li role="presentation"><a class="navigation-list__item" href="contact.html" target="blank" role="menuitem"> Contact </a></li>
+                    <li role="presentation"><a class="navigation-list__item" href="work.html" target="blank" role="menuitem"> Work </a></li>
+                </ul> <!-- // close list -->
+            </nav> <!-- // close navigation -->
+        </header> <!-- // close header -->
+
+
+        <!-- main -->
+        <main class="contactPage-main">
+            <h1> Get in touch </h1>
+            <p>
             Happy you got here. Below you can register or contact me any time directly. Looking forward getting in touch with you.
-        </p>
+            </p>
 
-        <h2> Registration </h2>
-        <form action="" method="post" id="contact-form">
+            <!-- registration form -->
+            <div class="registration-container">
+                <h2> Registration </h2>
+                <!-- form -->
+                <form action="" method="post" id="contact-form" class="registration-container__form">
 
-            <label class="standard-label" for="contact-email"> Email *: </label>
-            <input type="email" id="contact-email" required="required"> 
-            <br> <br>
+                    <label class="standard-label" for="contact-email"> Email *: </label>
+                    <input class="standard-input" type="email" id="contact-email" required="required"> 
+                    <br>
 
-            <label class="standard-label" for="contact-tel"> Mobile: </label>
-            <input type="tel" id="contact-tel">
-            <br> <br>
+                    <label class="standard-label" for="contact-tel"> Mobile: </label>
+                    <input class="standard-input" type="tel" id="contact-tel">
+                    <br>
 
-            <label class="standard-label" for="contact-message"> Message: </label>
-            <textarea maxlength="240" id="contact-message"> </textarea>
-            <br> <br>
+                    <label class="standard-label" for="contact-message"> Message: </label>
+                    <textarea class="standard-input" maxlength="240" id="contact-message"> </textarea>
+                    <br>
 
-            <label class="standard-label" for="contact-password"> Password *: </label>
-            <input type="text" id="contact-password" required="required">
-            <br> <br>
+                    <label class="standard-label" for="contact-password"> Password *: </label>
+                    <input class="standard-input" type="text" id="contact-password" required="required">
+                    <br>
 
-            <p> *: Please fill out the required fields for our all sake ;) </p>
-            <input type="submit" value="Send message">
-            <br> <br>
-        </form>
+                    <p> *: Please fill out the required fields for our all sake ;) </p>
+                    <input type="submit" value="Send message" class="button">
+                    <br>
+                </form><!-- // close form -->
+            </div><!-- // close registration form -->
+           
+            <!-- // close contact form -->
+            <div container="contact-container">
+                <h2> Contact </h2>
+                <div>
+                    Christian Mustermann<br>
+                    Musterstraße XY<br>
+                    77777 HinterDenSiebenBergen<br>
+                    Schlaraffenland<br>
+                    <br>
+                    Tel <a href="tel:+491234567"> This is my phone number</a><br>
+                    Mail <a href="mailto:example@example.com"> This is a link to my mail </a>
+                    <p> More information about me you can find on the <a href="about.html" rel="Menu about page"> about </a> webpage. </p> 
+                </div>
+            </div><!-- // close contact form -->
+        
+        </main> <!-- // close main -->
+        
 
-        <h2> Contact </h2>
-            <div>
-                Christian Kienzle<br>
-                Wesenberger Ring 19a<br>
-                12359 Berlin<br>
-                Deutschland<br>
-                <br>
-                Tel <a href="tel:+491234567">+49 1773749464</a><br>
-                Mail <a href="mailto:christian.kienzle.1982@gmail.com"> E-Mail Contact </a>
-                <p> More information you find on the <a href="about.html" rel="Menu about page"> about </a> webpage. </p> 
-            </div>
-    </main>
+        <!-- Footer -->
+        <footer class="page-footer">
+            <p> Find me on </p>
+            <!-- social portfolio icons -->
+            <div class="social-media">
+                <a href="https://www.linkedin.com/" rel="This is the link to my linkedIn page"><img class="social-media__item--icon" src="img/linkedinIcon.svg" alt="This is the icon LinkedIn"></a>
+                <a href="https://github.com/login" rel="This is the link to my github page"><img class="social-media__item--icon" src="img/githubIcon.svg" alt="This is the icon LinkedIn"></a>
+                <a href="https://twitter.com/?lang=de" rel="This is the link to my twitter page"><img class="social-media__item--icon" src="img/twitterIcon.svg" alt="This is the icon LinkedIn"></a>
+            </div> <!-- // Links to my social portfolio -->
+        </footer> <!-- // footer -->
 
-    <footer class="page-footer">
-        <p>
-            Find me on
-        </p >
-        <div class="page-footer__socialMedia">
-            <img src="img/githubIcon.svg" class="page-footer__socialMedia---Icon" alt="This is a Github logo and a link to my personal github page">
-            <img src="img/twitterIcon.svg" class="page-footer__socialMedia---Icon" alt="This is a Twitter logo and a link to my tweets">
-            <img src="img/linkedinIcon.svg" class="page-footer__socialMedia---Icon" alt="This is a LinkedIn logo and a link to my LinkedIn account">
-        </div>
-    </footer>
+        <!-- Java Script -->
+        <script src="js/tota11y.min.js"> </script>
+    </body> <!-- // body -->
+</html> <!-- // html -->
 
-    <script src="js/tota11y.min.js"> </script>
-</body>
-</html>

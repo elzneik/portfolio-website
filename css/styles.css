@@ -27,58 +27,46 @@ header {
   
   main {
     margin: 0;
+    padding: 30px 20px 80px 20px;
     /*padding: 20px;*/
   }
   
   footer {
     margin: 0;
   }
+    
 
 /* 
 =====================================
 1. GLOBAL COLOUR STYLINGS
 =====================================
 */
-
 :root{
-    /* Primary Brand Colours */
-    /* Secondary Brand Colours */
+    /* primary brand colors*/
+    --wolf-grey: #bebecaef;             /* body                 background-color*/
+    --night-black: #2e2e30ef;           /* body; table          color */
+    --ocean-blue: #078bf8ef;            /* button               background-color*/
+    --snow-white: #fffdfe;              /* button               color */
+    --stone-turquoise: #0882bbef;       /* anchor               color */
 
-    /* Primary Body Colours */
-    --primary-backgroundcolor-body: #bebecaef;
+    /* secondary brand colors */
+    --eagle-grey: #acacacef;             /* body                 background-color*/
 
-    /* Primary Grid Colours */
-    --primary-backgroundcolor-grid: #adaddaef;
+    /* action colors */
+    --vistied-blue: #2a306bef;            /* anchor:hover      background-color */
+    --active-blue: #097ad6ef;            /* anchor:focus      background-color */
+    --silver-white: #f9fcffef;              /* button           border color */
 
-    /* Anchor Colours */
-    --primary-color-anchor: #357b70;
-    --primary-color-anchor-visited: #025829;
-    --primary-color-anchor-active: #034d5a;
 
-    /* Button - Primary Colours */
-    --primary-backgroundcolor-button: #adaddaef;
-    --primary-color-button: #f3f7f5;
-    /* Button - Secondary Colours */
-    --secondary-backgroundcolor-button: #e0b354;
-    --secondary-color-button: #2b2b2b;
-    /* Button - Border Colours */
-    --button-border: rgba(0, 0, 0, 0.3);
+    /* Berliner Tor colors */
+    --sun-shine: #ecdd08ef;                 /* sun 0% */
+    --evening-sun: #d67d09ef;               /* sun 50% */
+    --sun-set: #e6231cef;                   /* sun 100% */
 
-    /* Animation Colours */
-    --primary-color-Animation-Sun: #edc655;
-    --secondary-color-Animation-Sun: #fcffad;
-    --third-color-Animation-Sun: #f76414;
 
-    /* Head + hr Colours */
-    --primary-color-hr: #333;
-    --primary-backgroundcolor-hr: #333;
-
-    
-
-    /*Display border for  BEM 1st Layer:                          2px solid #212423;
-    Display border-     BEM 2nd Layer:                          2px solid #049766;
-    Display border-     BEM 3rd Layer:                          2px solid #970404;*/
 }
+
+
 
 
 /* 
@@ -88,47 +76,48 @@ header {
 */
 
 :root{
-/************************* Font-Size >>> Body & Headlines*/
-/*--size-large:*/
---size-regular: 18px;
---size-small: 16px;
---h1-size: 30px;
---h2-size: 24px;
---h3-size: 20px;
-
-/*************************  Font-Weight >>> Body & Headlines */
-/*--size-large:*/
---weight-regular: 400;
-/*--size-small:*/
---h1-weight: 700;
---h2-weight: 600;
---h3-weight: 500;
+    --size-large:       22px;
+    --size-standard:    18px;
+    --size-button:      16px;
+    --h1-size:          24px;
+    --h2-size:          22px;
+    --h3-size:          20px;
+    --font-heavy:       800;
+    --font-bold:        600;
+    --font-light:       400;
+    --line-large:       1.6;
+    --line-medium:      1.3;
+    --line-small:       1.0;
 }
 
 body{
-    /****** Color *****/
-    background-color: var(--primary-backgroundcolor-body);
-    /***** Typographie *****/
-    font-family: "Lato", sans-serif;
-    font-size: var(--size-regular);
-    font-weight: var(--weight-regular);
-    line-height: 1.3;
+    /* color */
+    background-color: var(--wolf-grey);
+    color: var(--night-black);
+    /* typography */
+    font-family: "Lato", sans-serif;                            /* Question: Why do we not use the google Typografie here? */
+    font-size: var(--size-standard);
+    font-weight: var(--font-bold);
+    line-height: var(--line-medium);
 }
 
 h1{
-    /***** Typographie *****/
+    /* typography */
     font-size: var(--h1-size);
-    font-weight: var(--h1-weight);
+    font-weight: var(--font-bold);
+    line-height: var(--line-medium);
 }
 h2{
-    /***** Typographie *****/
+    /* typography */
     font-size: var(--h2-size);
-    font-weight: var(--h2-weight);
+    font-weight: var(--font-bold);
+    line-height: var(--line-medium);
 }
 h3{
-    /***** Typographie *****/
+    /* typography */
     font-size: var(--h3-size);
-    font-weight: var(--h3-weight);
+    font-weight: var(--font-bold);
+    line-height: var(--line-medium);
 }
 
 
@@ -138,122 +127,126 @@ h3{
 =====================================
 */
 
-/**************************************************************************** ANCHOR */
+
 a{
-    color: var(--primary-color-anchor);
-    margin: 20px;
+    color: var(--stone-turquoise);
+    /*margin: 5px;*/
 }
 a:hover, a:focus{
     text-decoration: none;
 }
 a:visited{
-    color: var(--primary-color-anchor-visited);
+    color: var(--heaven-blue);
 }
 a:active{
-    color: var(--primary-color-anchor-active);
+    color: var(--smaragd-green);
 }
 
-/**************************************************************************** Button */
-button, .button{
-    /****** Color *****/
-    background-color: var(--primary-backgroundcolor-button);
-    color: var(--primary-color-button);
-    /***** Typographie *****/
-    font-family: inherit;
-    font-size: var(--size-small);
-    text-decoration: none;
-    /***** Layout *****/
-    display: inline-block;
-    /*margin: 20px;*/
-    padding: 10px;
-    border-radius: 3px;
-    border: none;
-    border-bottom: 2px solid var(--button-border);
-    transition: opacity 0.2s;
+.button-code, .button-contact, .button{
+/* Color */
+background-color: var(--ocean-blue);
+color: var(--snow-white);
+/*Typographie */
+font-family: inherit;
+font-size: var(--size-button);
+text-decoration: none;
+/*Layout */
+display: inline-block;
+margin: 5px;           /*margin can be found under anchor*/
+padding: 10px;
+border-radius: 3px;
+border: none;
+border-bottom: 2px solid var(--silver-white);
+transition: opacity 0.2s;
 }
-
-button:hover, button:focus,
- .button:hover, .button:focus{
+.button-code:hover, .button-code:focus,
+    .button-contact:hover, .button-contact:focus
+        .button:hover, .button:focus{
     cursor: pointer;
     opacity: 0.8;
+}
 
-}
-.button__secondary{
-    /****** Layout *****/
-    margin: 20px;
-    /****** Color *****/
-    background-color: var(--secondary-backgroundcolor-button);
-    color: var(--secondary-color-button);
-}
 
 /* 
 =====================================
 4. PRIMARY NAVIGATION
 =====================================
+<header         class="page-header"
+<img            class="page-header__item" class="page-header__logo"
+<nav            class="page-header__item" class="navigation-menu"
+<ul             class="navigation-list"
+<li             <a class="navigation-list__item" class="navigation-list__item--active"
 */
 
-.navigation-list__item---active{
-    text-decoration: none;
-}
-.navigation-list{
-    list-style-type: none;
-}
-.navigation-list li{
-    display: inline-block;
-    margin: 15px;
-}
+/* === header === */
 .page-header{
-    /*border: 2px solid #212423;*/
+    /* color */
+    background-color: var(--eagle-grey);
+    /* layout */
     display: flex;
     width: 100%;
     padding: 20px;
+    /*border-bottom: 3px solid var(--eagleEye-grey);*/          /* Issue: I added sth (do not know what) and now the border is not shown. What can influence the border line? */
 }
-.page-header__item{
-    /*border: 2px solid #049766;*/
+.page-header__item{                      /* ISSUE: How does this work? My picture is getting bigger and bigger eacht time I change the size, also when I use smaller numbers!!! 
+                                            This is an issue with jpg picture. I designed my own svg, added it and it works much better now. */
     flex: 0 1 200px;
 }
 .page-header__item:last-child{
-    flex-grow: 1;
     text-align: right;
+    flex-grow: 1;
 }
-.page-header__hr{
-    border: none;
-    height: 2px;
-    /* Set the hr color */
-    color: var(--primary-color-hr); /* old IE */
-    background-color: var(--primary-backgroundcolor-hr); /* Modern Browsers */
+/* === UL === */
+.navigation-list{
+    list-style-type: none;
 }
+/* === links (list) === */
+.navigation-list li{                        /* Question: Why do we not give the li a class, for instance, class="navigation-menu__item". And then the ul the name "list-navigation"? */
+    display: inline-block;
+    /*margin: 5px 20px;*/
+    margin: 15px;
+}
+.navigation-list__item--active{
+    text-decoration: none;
+}
+/* === brand logo === */
+/*.page-header__logo{                       /* Question: Why can I not use this property and value to specifiy the width and height? I had to add the information into the html code. 
+max-width: 5px;
+height: 10px;
+padding-right: 100px;
+}*/
 
-/*
-.page-header__logo{
-    width: 50px;
-    height: 100px;
+@media all and (min-width: 300px) and (max-width: 500px) { 
+    .page-header__logo{
+        width: 100px;
+        height: 100px;
+    }
 }
-*/
 
 /* 
 =====================================
 5. FOOTER
 =====================================
+<footer         class="page-footer"></footer>
+<div            class="social-media
+<img            class="social-media__item--icon" 
 */
 
 .page-footer{
-    /*border: 2px solid #212423;*/
+    /* color */
+    background-color: var(--eagle-grey);
+    /* layout */
     clear: both;
     display: flex;
     flex-direction: column;
     text-align: center;
+    border-top: 2px solid var(--eagleEye-grey);             /* Issue: I added sth (do not know what) and now the border is not shown. What can influence the border line? */
+    padding: 30px 0 100px 0;
 }
-.page-footer__socialMedia{
-    /*border: 2px solid #049766;*/
-    display: flex;
-    justify-content: center;
-}
-.page-footer__socialMedia---Icon{
-    /*border: 2px solid #970404;*/
-    width: 40px;
-    height: auto;
-    margin: 3px; 
+.social-media__item--icon{
+    width: 25px;
+    height: auto;                                                
+    margin: 2px;
 }
 
 /* 
@@ -263,24 +256,16 @@ button:hover, button:focus,
 */
 
 .profile{
-    /*border: 2px solid #212423;*/
-    max-width: 700px;
-    height: auto;
+    max-width: 800px;
     margin: 0 auto;
-    text-align: left;
-    display: flex;
+    text-align: center;
 }
-.profile__portrait{
+.profile__picture{
     float: left;
-    width: 240px;
-    height: 255px;
-    border-radius: 50%;
-    margin-right: 40px;
+    width: 250px;
+    border-radius: 47%;
+    margin-right: 30px;
 }
-.profile__text{
-    flex: 1 1 100px;
-}
-
 
 /* 
 =====================================
@@ -288,15 +273,16 @@ button:hover, button:focus,
 =====================================
 */
 
-/**************************************************************************** start grid fallback */
-.project-list__item {
+
+/******start grid fallback */
+.project-list__item{
     display: inline-block;
     width: 33%;
 }
-/**************************************************************************** end grid fallback */
+/******end grid fallback */
 
 @supports (display: grid){
-.project-list {
+.project-list{
         /*border: 2px solid #212423;*/
         /*text-align: center;*/
         display: grid;
@@ -304,9 +290,9 @@ button:hover, button:focus,
         gap: 20px;
         margin: 0;
         /*justify-content: center;*/
-}
-    .project-list__item {
-        background-color:  var(--primary-backgroundcolor-grid);
+    }
+    .project-list__item{
+        background-color:  var(--eagle-grey);
         /*text-align:center;*/
         width: auto;
         min-height: auto;
@@ -319,54 +305,84 @@ button:hover, button:focus,
     
 }
 
-/**************************************************************************** Media */
-@media all and (max-width: 500px) { 
-    .project-list{
-        grid-template-columns: 1fr;
-    }
-}
-@media all and (min-width: 500px) and (max-width: 750px) { 
-    .project-list{
-        grid-template-columns: 1fr 1fr;
-    }
-}
-@media all and (max-width: 750px) { 
-    .project-list{
-        gap: 10px;
-    }
-    .project-list__item:last-child{
-        grid-column: auto / auto;
-        grid-row: auto / auto;
-    }
-    h1{
-    font-size: 20px;
-    }
-}
+
+
+
+
 
 /* 
 =====================================
-8. ABOUT PAGE
+8. About PAGE
 =====================================
 */
 
 .about-page{
-    max-width: 500px;
-    margin: auto;
     text-align: center;
 }
-.about-page__list{
-    list-style-type: none;
+.container-intro{
+    text-align: center;
+    max-width: 100%;
+    padding: 0 100px 20px 100px;
+}
+.intro-list{
+    list-style-type: none;                      /*Issue: I want to show disc but the discs are shown on the left side. I checked the border and can see it looks like a table. */
+}
+.container-insights{
+    background-color: var(--wolf-grey);
+    border: 1px solid var(--eagle-grey);
+    margin: 15px 50px; 
+    padding: 20px 100px;
+}
+.container-table{
+    background-color: var(--wolf-grey);
+    border: 1px solid var(--eagle-grey);
+    margin: 15px 50px;
+}
+.table-canvas{
+    background-color: var(--snow-white);
+    border: 1px solid var(--night-black);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0 20px 0;
+}
+/*.table-canvas__item{                          Issue: Access to table is not easy. Can not change the table size only on container side. But using padding or margin, not possible.                    
+    padding: 5px;
+}*/
+.table-headline{
+    color: var(--night-black);
+    font-weight: var(--font-bold);
+    font-size: var(--size-large);
+    text-decoration: underline var(--night-black);
+}
+
+/*
+.container-buttoncv{                            ISSUE: I can not move the button, want more space top and bottom
+    border: 2px solid black;
+    margin: 20px 0;
+}*/
+
+                                         /* ISSUE: I can not change the picture size */
+.berlin-illustration{
+width: 50%;
+height: auto;
+}
+
+.container-berliner{
+    max-width: 500px;
+    height: auto;
+    border: 2px solid red;
+    padding: 200px; 
 }
 
 @keyframes color-change {
     0% {
-        fill: var(--primary-color-Animation-Sun);
+        fill: var(--sun-shine);
     }
     50% {
-        fill: var(--secondary-color-Animation-Sun);
+        fill: var(--evening-sun);
     }
     100% {
-        fill: var(--third-color-Animation-Sun);
+        fill: var(--sun-set);
     }
 }
 .sun{
@@ -399,3 +415,59 @@ button:hover, button:focus,
   .cloud-back {
     animation: 10s cloud-move-reverse infinite alternate linear;
   }
+
+
+/* 
+=====================================
+9. Contact PAGE
+=====================================
+*/
+.contact-container{
+    
+    border: 2px solid var(--eagle-grey);                /* ISSUE: Why does it not work ? */
+    background-color: var(--snow-white);
+}
+.contactPage-main{
+    text-align:center;
+}
+.standard-label, .standard-input{
+    display:block;
+    text-align:left;
+    max-width: 180px;
+    margin:auto;
+    padding:auto;
+}
+.registration-container{
+    padding:20px 0;
+}
+.registration-container__form{
+    padding:20px 0;
+}
+
+
+
+
+/**************************************************************************** Media */
+
+@media all and (max-width: 500px) { 
+    .project-list{
+        grid-template-columns: 1fr;
+    }
+}
+@media all and (min-width: 500px) and (max-width: 750px) { 
+    .project-list{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media all and (max-width: 750px) { 
+    .project-list{
+        gap: 10px;
+    }
+    .project-list__item:last-child{
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+    }
+    h1{
+    font-size: 20px;
+    }
+}
