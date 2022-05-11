@@ -50,26 +50,16 @@ header {
 =====================================
 */
 :root{
-/* primary brand colors*/
---wolf-grey: #bebecaef;             /* body                 background-color*/
---night-black: #2e2e30ef;           /* body; table          color */
---ocean-blue: #078bf8ef;            /* button               background-color*/
---snow-white: #fffdfe;              /* button               color */
---stone-turquoise: #0882bbef;       /* anchor               color */
+    /* primary brand colors*/             /* body                 background-color*/           /* body; table          color */            /* button               background-color*/              /* button               color */       /* anchor               color */
 
-/* secondary brand colors */
---eagle-grey: #acacacef;             /* body                 background-color*/
+    /* secondary brand colors */             /* body                 background-color*/
 
-/* action colors */
---vistied-blue: #2a306bef;            /* anchor:hover      background-color */
---active-blue: #097ad6ef;            /* anchor:focus      background-color */
---silver-white: #f9fcffef;              /* button           border color */
+    /* action colors */            /* anchor:hover      background-color */            /* anchor:focus      background-color */              /* button           border color */
 
 
-/* Berliner Tor colors */
---sun-shine: #ecdd08ef;                 /* sun 0% */
---evening-sun: #d67d09ef;               /* sun 50% */
---sun-set: #e6231cef;                   /* sun 100% */
+    /* Berliner Tor colors */                 /* sun 0% */               /* sun 50% */                   /* sun 100% */
+
+
 }
 
 
@@ -98,19 +88,20 @@ h1{
     font-weight: 600;
     line-height: 1.3;
 }
+
 h2{
     /* typography */
     font-size: 22px;
     font-weight: 600;
     line-height: 1.3;
 }
+
 h3{
     /* typography */
     font-size: 20px;
     font-weight: 600;
     line-height: 1.3;
 }
-
 
 /* 
 =====================================
@@ -133,6 +124,8 @@ a:active{
     color: undefined;
 }
 
+
+
 .button-code{
 /* Color */
 background-color: #078bf8ef;
@@ -152,6 +145,8 @@ border-bottom: 2px solid #f9fcffef;
 transition: opacity 0.2s;
 }
 
+
+
 .button-contact{
 /* Color */
 background-color: #078bf8ef;
@@ -170,6 +165,8 @@ border-bottom: 2px solid #f9fcffef;
 -webkit-transition: opacity 0.2s;
 transition: opacity 0.2s;
 }
+
+
 
 .button{
 /* Color */
@@ -220,8 +217,8 @@ transition: opacity 0.2s;
     padding: 20px;
     /*border-bottom: 3px solid var(--eagleEye-grey);*/          /* Issue: I added sth (do not know what) and now the border is not shown. What can influence the border line? */
 }
-.page-header__item{                      /* ISSUE: How does this work? My picture is getting bigger and bigger each time I change the size, also when I use smaller numbers!!! 
-                                            This is an issue with the jpg picture. I designed my own SVG, added it and it works much better now. */
+.page-header__item{                      /* ISSUE: How does this work? My picture is getting bigger and bigger eacht time I change the size, also when I use smaller numbers!!! 
+                                            This is an issue with jpg picture. I designed my own svg, added it and it works much better now. */
     -webkit-box-flex: 0;
         -ms-flex: 0 1 200px;
             flex: 0 1 200px;
@@ -371,7 +368,7 @@ padding-right: 100px;
     padding: 0 100px 20px 100px;
 }
 .intro-list{
-    list-style-type: none;                      /*Issue: I want to show discs but the discs are shown on the left side. I checked the border and can see it looks like a table. */
+    list-style-type: none;                      /*Issue: I want to show disc but the discs are shown on the left side. I checked the border and can see it looks like a table. */
 }
 .container-insights{
     background-color: #bebecaef;
@@ -391,7 +388,7 @@ padding-right: 100px;
     margin-right: auto;
     padding: 0 0 20px 0;
 }
-/*.table-canvas__item{                          Issue: Access to table is not easy. Can not change the table size only on the container side. But using padding or margin is not possible.                    
+/*.table-canvas__item{                          Issue: Access to table is not easy. Can not change the table size only on container side. But using padding or margin, not possible.                    
     padding: 5px;
 }*/
 .table-headline{
@@ -412,6 +409,13 @@ padding-right: 100px;
 .berlin-illustration{
 width: 50%;
 height: auto;
+}
+
+.container-berliner{
+    max-width: 500px;
+    height: auto;
+    border: 2px solid red;
+    padding: 200px; 
 }
 
 @-webkit-keyframes color-change {
@@ -506,7 +510,8 @@ height: auto;
 =====================================
 */
 .contact-container{
-    border: 2px solid #acacacef;
+    
+    border: 2px solid #acacacef;                /* ISSUE: Why does it not work ? */
     background-color: #fffdfe;
 }
 .contactPage-main{
