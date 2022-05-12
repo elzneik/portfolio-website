@@ -1,11 +1,4 @@
 /*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.12,
-* Autoprefixer: v10.4.4
-* Browsers: last 4 version
-*/
-
-/*
 Table of Contents: 
 0. Global: Spacing & Layout
 1. Global: Colours
@@ -26,8 +19,7 @@ Table of Contents:
 */
 
 *{
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 header {
     margin: 0;
@@ -62,7 +54,7 @@ header {
 
     /* action colors */
     --vistied-blue: #2a306bef;            /* anchor:hover      background-color */
-    --active-blue: #097ad6ef;            /* anchor:active      background-color */
+    --active-blue: #097ad6ef;            /* anchor:focus      background-color */
     --silver-white: #f9fcffef;              /* button           border color */
 
 
@@ -83,34 +75,49 @@ header {
 =====================================
 */
 
+:root{
+    --size-large:       22px;
+    --size-standard:    18px;
+    --size-button:      16px;
+    --h1-size:          24px;
+    --h2-size:          22px;
+    --h3-size:          20px;
+    --font-heavy:       800;
+    --font-bold:        600;
+    --font-light:       400;
+    --line-large:       1.6;
+    --line-medium:      1.3;
+    --line-small:       1.0;
+}
+
 body{
     /* color */
-    background-color: #bebecaef;
-    color: #2e2e30ef;
+    background-color: var(--wolf-grey);
+    color: var(--night-black);
     /* typography */
     font-family: "Lato", sans-serif;                            /* Question: Why do we not use the google Typografie here? */
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.3;
+    font-size: var(--size-standard);
+    font-weight: var(--font-bold);
+    line-height: var(--line-medium);
 }
 
 h1{
     /* typography */
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 1.3;
+    font-size: var(--h1-size);
+    font-weight: var(--font-bold);
+    line-height: var(--line-medium);
 }
 h2{
     /* typography */
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 1.3;
+    font-size: var(--h2-size);
+    font-weight: var(--font-bold);
+    line-height: var(--line-medium);
 }
 h3{
     /* typography */
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.3;
+    font-size: var(--h3-size);
+    font-weight: var(--font-bold);
+    line-height: var(--line-medium);
 }
 
 
@@ -122,26 +129,26 @@ h3{
 
 
 a{
-    color: #0882bbef;
+    color: var(--stone-turquoise);
     /*margin: 5px;*/
 }
 a:hover, a:focus{
     text-decoration: none;
 }
 a:visited{
-    color: #2a306bef;
+    color: var(--heaven-blue);
 }
 a:active{
-    color: #097ad6ef;
+    color: var(--smaragd-green);
 }
 
-.button-code{
+.button-code, .button-contact, .button{
 /* Color */
-background-color: #078bf8ef;
-color: #fffdfe;
+background-color: var(--ocean-blue);
+color: var(--snow-white);
 /*Typographie */
 font-family: inherit;
-font-size: 16px;
+font-size: var(--size-button);
 text-decoration: none;
 /*Layout */
 display: inline-block;
@@ -149,49 +156,7 @@ margin: 5px;           /*margin can be found under anchor*/
 padding: 10px;
 border-radius: 3px;
 border: none;
-border-bottom: 2px solid #f9fcffef;
--webkit-transition: opacity 0.2s;
--o-transition: opacity 0.2s;
-transition: opacity 0.2s;
-}
-
-.button-contact{
-/* Color */
-background-color: #078bf8ef;
-color: #fffdfe;
-/*Typographie */
-font-family: inherit;
-font-size: 16px;
-text-decoration: none;
-/*Layout */
-display: inline-block;
-margin: 5px;           /*margin can be found under anchor*/
-padding: 10px;
-border-radius: 3px;
-border: none;
-border-bottom: 2px solid #f9fcffef;
--webkit-transition: opacity 0.2s;
--o-transition: opacity 0.2s;
-transition: opacity 0.2s;
-}
-
-.button{
-/* Color */
-background-color: #078bf8ef;
-color: #fffdfe;
-/*Typographie */
-font-family: inherit;
-font-size: 16px;
-text-decoration: none;
-/*Layout */
-display: inline-block;
-margin: 5px;           /*margin can be found under anchor*/
-padding: 10px;
-border-radius: 3px;
-border: none;
-border-bottom: 2px solid #f9fcffef;
--webkit-transition: opacity 0.2s;
--o-transition: opacity 0.2s;
+border-bottom: 2px solid var(--silver-white);
 transition: opacity 0.2s;
 }
 .button-code:hover, .button-code:focus,
@@ -216,10 +181,8 @@ transition: opacity 0.2s;
 /* === header === */
 .page-header{
     /* color */
-    background-color: #acacacef;
+    background-color: var(--eagle-grey);
     /* layout */
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 100%;
     padding: 20px;
@@ -227,15 +190,11 @@ transition: opacity 0.2s;
 }
 .page-header__item{                      /* ISSUE: How does this work? My picture is getting bigger and bigger eacht time I change the size, also when I use smaller numbers!!! 
                                             This is an issue with jpg picture. I designed my own svg, added it and it works much better now. */
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 200px;
-            flex: 0 1 200px;
+    flex: 0 1 200px;
 }
 .page-header__item:last-child{
     text-align: right;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    flex-grow: 1;
 }
 /* === UL === */
 .navigation-list{
@@ -275,18 +234,13 @@ padding-right: 100px;
 
 .page-footer{
     /* color */
-    background-color: #acacacef;
+    background-color: var(--eagle-grey);
     /* layout */
     clear: both;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     text-align: center;
-    border-top: #acacacef;             /* Issue: I added sth (do not know what) and now the border is not shown. What can influence the border line? */
+    border-top: 2px solid var(--eagleEye-grey);             /* Issue: I added sth (do not know what) and now the border is not shown. What can influence the border line? */
     padding: 30px 0 100px 0;
 }
 .social-media__item--icon{
@@ -331,26 +285,21 @@ padding-right: 100px;
 .project-list{
         /*border: 2px solid #212423;*/
         /*text-align: center;*/
-        display: -ms-grid;
         display: grid;
-        -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
         margin: 0;
         /*justify-content: center;*/
     }
     .project-list__item{
-        background-color:  #acacacef;
+        background-color:  var(--eagle-grey);
         /*text-align:center;*/
         width: auto;
         min-height: auto;
         margin: 0;
     }
     .project-list__item:last-child{
-        -ms-grid-column: 3;
         grid-column: 3 / 3;
-        -ms-grid-row: 1;
-        -ms-grid-row-span: 2;
         grid-row: 1 / 3;
     }
     
@@ -379,19 +328,19 @@ padding-right: 100px;
     list-style-type: none;                      /*Issue: I want to show disc but the discs are shown on the left side. I checked the border and can see it looks like a table. */
 }
 .container-insights{
-    background-color: #bebecaef;
-    border: 1px solid #acacacef;
+    background-color: var(--wolf-grey);
+    border: 1px solid var(--eagle-grey);
     margin: 15px 50px; 
     padding: 20px 100px;
 }
 .container-table{
-    background-color: #bebecaef;
-    border: 1px solid #acacacef;
+    background-color: var(--wolf-grey);
+    border: 1px solid var(--eagle-grey);
     margin: 15px 50px;
 }
 .table-canvas{
-    background-color: #fffdfe;
-    border: 1px solid #2e2e30ef;
+    background-color: var(--snow-white);
+    border: 1px solid var(--night-black);
     margin-left: auto;
     margin-right: auto;
     padding: 0 0 20px 0;
@@ -400,11 +349,10 @@ padding-right: 100px;
     padding: 5px;
 }*/
 .table-headline{
-    color: #2e2e30ef;
-    font-weight: 600;
-    font-size: 22px;
-    -webkit-text-decoration: underline #2e2e30ef;
-            text-decoration: underline #2e2e30ef;
+    color: var(--night-black);
+    font-weight: var(--font-bold);
+    font-size: var(--size-large);
+    text-decoration: underline var(--night-black);
 }
 
 /*
@@ -419,87 +367,46 @@ width: 50%;
 height: auto;
 }
 
-@-webkit-keyframes color-change {
-    0% {
-        fill: #ecdd08ef;
-    }
-    50% {
-        fill: #d67d09ef;
-    }
-    100% {
-        fill: #e6231cef;
-    }
-}
-
 @keyframes color-change {
     0% {
-        fill: #ecdd08ef;
+        fill: var(--sun-shine);
     }
     50% {
-        fill: #d67d09ef;
+        fill: var(--evening-sun);
     }
     100% {
-        fill: #e6231cef;
+        fill: var(--sun-set);
     }
 }
 .sun{
-    -webkit-animation: 4s color-change infinite alternate linear;
-            animation: 4s color-change infinite alternate linear;
+    animation: 4s color-change infinite alternate linear;
 }
-@-webkit-keyframes cloud-moves {
-    from {
-        -webkit-transform: translate(0. 50px);
-                transform: translate(0. 50px)
-    }
-    to {
-        -webkit-transform: translate(200px, 50px);
-                transform: translate(200px, 50px)
-    }
-}
+
 @keyframes cloud-moves {
     from {
-        -webkit-transform: translate(0. 50px);
-                transform: translate(0. 50px)
-            }
+        transform: translate(0. 50px)
+    }
     to {
-        -webkit-transform: translate(200px, 50px);
-                transform: translate(200px, 50px)
+        transform: translate(200px, 50px)
     }
 }
 
 .cloud-front {
-    -webkit-animation: 30s cloud-moves infinite alternate linear;
-            animation: 30s cloud-moves infinite alternate linear;
+    animation: 30s cloud-moves infinite alternate linear;
 }
-
-@-webkit-keyframes cloud-move-reverse {
-    from {
-      -webkit-transform: translate(450px, 48px);
-              transform: translate(450px, 48px);
-      /*transform: rotate(0deg)*/
-    }
-    to {
-      -webkit-transform: translate(100px, 48px);
-              transform: translate(100px, 48px);
-      /*transform: rotate(120deg)*/
-    }
-  }
 
 @keyframes cloud-move-reverse {
     from {
-      -webkit-transform: translate(450px, 48px);
-              transform: translate(450px, 48px);
+      transform: translate(450px, 48px);
       /*transform: rotate(0deg)*/
     }
     to {
-      -webkit-transform: translate(100px, 48px);
-              transform: translate(100px, 48px);
+      transform: translate(100px, 48px);
       /*transform: rotate(120deg)*/
     }
   }
   .cloud-back {
-    -webkit-animation: 10s cloud-move-reverse infinite alternate linear;
-            animation: 10s cloud-move-reverse infinite alternate linear;
+    animation: 10s cloud-move-reverse infinite alternate linear;
   }
 
 
@@ -509,8 +416,8 @@ height: auto;
 =====================================
 */
 .contact-container{
-    border: 2px solid #acacacef;
-    background-color: #fffdfe;
+    border: 2px solid var(--eagle-grey);
+    background-color: var(--snow-white);
 }
 .contactPage-main{
     text-align:center;
@@ -520,7 +427,7 @@ height: auto;
     text-align:left;
     max-width: 180px;
     margin:auto;
-    /*padding:0;*/
+    padding:auto;
 }
 .registration-container{
     padding:20px 0;
@@ -536,13 +443,11 @@ height: auto;
 
 @media all and (max-width: 500px) { 
     .project-list{
-        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
 }
 @media all and (min-width: 500px) and (max-width: 750px) { 
     .project-list{
-        -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     }
 }

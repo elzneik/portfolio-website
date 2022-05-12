@@ -2,7 +2,7 @@
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.12,
 * Autoprefixer: v10.4.4
-* Browsers: last 4 version
+* Browsers: last 2 version
 */
 
 /*
@@ -50,28 +50,26 @@ header {
 =====================================
 */
 :root{
-    /* primary brand colors*/
-    --wolf-grey: #bebecaef;             /* body                 background-color*/
-    --night-black: #2e2e30ef;           /* body; table          color */
-    --ocean-blue: #078bf8ef;            /* button               background-color*/
-    --snow-white: #fffdfe;              /* button               color */
-    --stone-turquoise: #0882bbef;       /* anchor               color */
+/* primary brand colors*/
+--wolf-grey: #bebecaef;             /* body                 background-color*/
+--night-black: #2e2e30ef;           /* body; table          color */
+--ocean-blue: #078bf8ef;            /* button               background-color*/
+--snow-white: #fffdfe;              /* button               color */
+--stone-turquoise: #0882bbef;       /* anchor               color */
 
-    /* secondary brand colors */
-    --eagle-grey: #acacacef;             /* body                 background-color*/
+/* secondary brand colors */
+--eagle-grey: #acacacef;             /* body                 background-color*/
 
-    /* action colors */
-    --vistied-blue: #2a306bef;            /* anchor:hover      background-color */
-    --active-blue: #097ad6ef;            /* anchor:active      background-color */
-    --silver-white: #f9fcffef;              /* button           border color */
-
-
-    /* Berliner Tor colors */
-    --sun-shine: #ecdd08ef;                 /* sun 0% */
-    --evening-sun: #d67d09ef;               /* sun 50% */
-    --sun-set: #e6231cef;                   /* sun 100% */
+/* action colors */
+--vistied-blue: #2a306bef;            /* anchor:hover      background-color */
+--active-blue: #097ad6ef;            /* anchor:focus      background-color */
+--silver-white: #f9fcffef;              /* button           border color */
 
 
+/* Berliner Tor colors */
+--sun-shine: #ecdd08ef;                 /* sun 0% */
+--evening-sun: #d67d09ef;               /* sun 50% */
+--sun-set: #e6231cef;                   /* sun 100% */
 }
 
 
@@ -129,10 +127,10 @@ a:hover, a:focus{
     text-decoration: none;
 }
 a:visited{
-    color: #2a306bef;
+    color: undefined;
 }
 a:active{
-    color: #097ad6ef;
+    color: undefined;
 }
 
 .button-code{
@@ -151,7 +149,6 @@ border-radius: 3px;
 border: none;
 border-bottom: 2px solid #f9fcffef;
 -webkit-transition: opacity 0.2s;
--o-transition: opacity 0.2s;
 transition: opacity 0.2s;
 }
 
@@ -171,7 +168,6 @@ border-radius: 3px;
 border: none;
 border-bottom: 2px solid #f9fcffef;
 -webkit-transition: opacity 0.2s;
--o-transition: opacity 0.2s;
 transition: opacity 0.2s;
 }
 
@@ -191,7 +187,6 @@ border-radius: 3px;
 border: none;
 border-bottom: 2px solid #f9fcffef;
 -webkit-transition: opacity 0.2s;
--o-transition: opacity 0.2s;
 transition: opacity 0.2s;
 }
 .button-code:hover, .button-code:focus,
@@ -225,8 +220,8 @@ transition: opacity 0.2s;
     padding: 20px;
     /*border-bottom: 3px solid var(--eagleEye-grey);*/          /* Issue: I added sth (do not know what) and now the border is not shown. What can influence the border line? */
 }
-.page-header__item{                      /* ISSUE: How does this work? My picture is getting bigger and bigger eacht time I change the size, also when I use smaller numbers!!! 
-                                            This is an issue with jpg picture. I designed my own svg, added it and it works much better now. */
+.page-header__item{                      /* ISSUE: How does this work? My picture is getting bigger and bigger each time I change the size, also when I use smaller numbers!!! 
+                                            This is an issue with the jpg picture. I designed my own SVG, added it and it works much better now. */
     -webkit-box-flex: 0;
         -ms-flex: 0 1 200px;
             flex: 0 1 200px;
@@ -286,7 +281,7 @@ padding-right: 100px;
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
-    border-top: #acacacef;             /* Issue: I added sth (do not know what) and now the border is not shown. What can influence the border line? */
+    border-top: undefined;             /* Issue: I added sth (do not know what) and now the border is not shown. What can influence the border line? */
     padding: 30px 0 100px 0;
 }
 .social-media__item--icon{
@@ -376,7 +371,7 @@ padding-right: 100px;
     padding: 0 100px 20px 100px;
 }
 .intro-list{
-    list-style-type: none;                      /*Issue: I want to show disc but the discs are shown on the left side. I checked the border and can see it looks like a table. */
+    list-style-type: none;                      /*Issue: I want to show discs but the discs are shown on the left side. I checked the border and can see it looks like a table. */
 }
 .container-insights{
     background-color: #bebecaef;
@@ -396,7 +391,7 @@ padding-right: 100px;
     margin-right: auto;
     padding: 0 0 20px 0;
 }
-/*.table-canvas__item{                          Issue: Access to table is not easy. Can not change the table size only on container side. But using padding or margin, not possible.                    
+/*.table-canvas__item{                          Issue: Access to table is not easy. Can not change the table size only on the container side. But using padding or margin is not possible.                    
     padding: 5px;
 }*/
 .table-headline{
@@ -446,6 +441,7 @@ height: auto;
     -webkit-animation: 4s color-change infinite alternate linear;
             animation: 4s color-change infinite alternate linear;
 }
+
 @-webkit-keyframes cloud-moves {
     from {
         -webkit-transform: translate(0. 50px);
@@ -456,11 +452,12 @@ height: auto;
                 transform: translate(200px, 50px)
     }
 }
+
 @keyframes cloud-moves {
     from {
         -webkit-transform: translate(0. 50px);
                 transform: translate(0. 50px)
-            }
+    }
     to {
         -webkit-transform: translate(200px, 50px);
                 transform: translate(200px, 50px)
@@ -520,7 +517,7 @@ height: auto;
     text-align:left;
     max-width: 180px;
     margin:auto;
-    /*padding:0;*/
+    padding:auto;
 }
 .registration-container{
     padding:20px 0;
