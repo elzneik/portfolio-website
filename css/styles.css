@@ -25,7 +25,7 @@ header {
     margin: 0;
   }
   
-  main {
+main {
     margin: 0;
     padding: 30px 20px 80px 20px;
     /*padding: 20px;*/
@@ -35,6 +35,9 @@ header {
     margin: 0;
   }
     
+html, body{
+    max-height: 100%;
+}
 
 /* 
 =====================================
@@ -130,19 +133,21 @@ h3{
 
 a{
     color: var(--stone-turquoise);
+    /*font-family: inherit;*/
     /*margin: 5px;*/
-}
-a:hover, a:focus{
-    text-decoration: none;
 }
 a:visited{
     color: var(--heaven-blue);
 }
+a:hover, a:focus{
+    text-decoration: none;
+}
 a:active{
     color: var(--smaragd-green);
+    
 }
 
-.button-code, .button-contact, .button{
+button, .button{
 /* Color */
 background-color: var(--ocean-blue);
 color: var(--snow-white);
@@ -151,19 +156,21 @@ font-family: inherit;
 font-size: var(--size-button);
 text-decoration: none;
 /*Layout */
-display: inline-block;
-margin: 5px;           /*margin can be found under anchor*/
+display: visible;
+margin: 5px;                   
 padding: 10px;
 border-radius: 3px;
 border: none;
 border-bottom: 2px solid var(--silver-white);
-transition: opacity 0.2s;
+transition-property: opacity;
+transition-duration: 0.5s;
+width: 150px;
 }
-.button-code:hover, .button-code:focus,
-    .button-contact:hover, .button-contact:focus
-        .button:hover, .button:focus{
+
+button:hover, button:focus,
+.button:hover, .button:focus{
     cursor: pointer;
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 
@@ -305,11 +312,6 @@ padding-right: 100px;
     
 }
 
-
-
-
-
-
 /* 
 =====================================
 8. About PAGE
@@ -331,13 +333,14 @@ padding-right: 100px;
     background-color: var(--wolf-grey);
     border: 1px solid var(--eagle-grey);
     margin: 15px 50px; 
-    padding: 20px 100px;
+    padding: 20px 20px;
 }
-.container-table{
+/*.container-table{
     background-color: var(--wolf-grey);
     border: 1px solid var(--eagle-grey);
-    margin: 15px 50px;
-}
+    margin: 15px 50px; 
+    padding: 20px 20px;
+}*/
 .table-canvas{
     background-color: var(--snow-white);
     border: 1px solid var(--night-black);
@@ -361,7 +364,7 @@ padding-right: 100px;
     margin: 20px 0;
 }*/
 
-                                         /* ISSUE: I can not change the picture size */
+                                                /* ISSUE: I can not change the picture size */
 .berlin-illustration{
 width: 50%;
 height: auto;
@@ -418,9 +421,14 @@ height: auto;
 .contact-container{
     border: 2px solid var(--eagle-grey);
     background-color: var(--snow-white);
+    max-width: 500px;
+    margin:auto;
+    padding: 10px;
 }
 .contactPage-main{
     text-align:center;
+    margin: auto;
+    /*border: 2px solid green;*/
 }
 .standard-label, .standard-input{
     display:block;
@@ -431,9 +439,11 @@ height: auto;
 }
 .registration-container{
     padding:20px 0;
+    margin: 50px 0;
+    /*border: 2px solid yellow;*/
 }
 .registration-container__form{
-    padding:20px 0;
+    padding:10px 0;
 }
 
 

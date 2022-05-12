@@ -107,20 +107,19 @@ h1{
     font-weight: var(--font-bold);
     line-height: var(--line-medium);
 }
-
 h2{
     /* typography */
     font-size: var(--h2-size);
     font-weight: var(--font-bold);
     line-height: var(--line-medium);
 }
-
 h3{
     /* typography */
     font-size: var(--h3-size);
     font-weight: var(--font-bold);
     line-height: var(--line-medium);
 }
+
 
 /* 
 =====================================
@@ -142,8 +141,6 @@ a:visited{
 a:active{
     color: var(--smaragd-green);
 }
-
-
 
 .button-code, .button-contact, .button{
 /* Color */
@@ -370,13 +367,6 @@ width: 50%;
 height: auto;
 }
 
-.container-berliner{
-    max-width: 500px;
-    height: auto;
-    border: 2px solid red;
-    padding: 200px; 
-}
-
 @keyframes color-change {
     0% {
         fill: var(--sun-shine);
@@ -426,8 +416,7 @@ height: auto;
 =====================================
 */
 .contact-container{
-    
-    border: 2px solid var(--eagle-grey);                /* ISSUE: Why does it not work ? */
+    border: 2px solid var(--eagle-grey);
     background-color: var(--snow-white);
 }
 .contactPage-main{
